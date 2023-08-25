@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(135deg, #1a1a1a, #121212);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  background-color: #292929;
+  border: 2px solid #ff6b6b; /* Rojo intenso */
+  color: #ff6b6b;
+  font-size: 18px;
+  padding: 10px;
+  height: 40px;
+  width: 150px;
+  transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.3); /* Sombra roja */
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ff0000; /* Rojo más brillante */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* Sombra roja brillante */
+}
+
+.btn {
+  background-color: #ff6b6b; /* Rojo intenso */
+  border: 0;
+  cursor: pointer;
+  color: #121212;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 50%;
+  margin-left: -40px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(110px);
+  background-color: #ff0000; /* Rojo más brillante */
+}
